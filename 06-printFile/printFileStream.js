@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var stream = fs.createReadStream('sample.txt', { encoding : 'utf8'});
+var stream = fs.createReadStream('calculatorData.dat', { encoding : 'utf8'});
 
 //events -> open, data, end, close, error
 
