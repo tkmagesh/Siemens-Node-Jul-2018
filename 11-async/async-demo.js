@@ -27,31 +27,39 @@ function runSync(){
 
 module.exports.runSync = runSync;
 
-function f1Async(){
+function f1Async(next){
 	console.log('f1Async triggered');
 	setTimeout(function(){
 		console.log('f1Async completed');
+		if (typeof next === 'function')
+			next();
 	}, 3000);
 }
 
-function f2Async(){
+function f2Async(next){
 	console.log('f2Async triggered');
 	setTimeout(function(){
 		console.log('f2Async completed');
+		if (typeof next === 'function')
+			next();
 	}, 3000);
 }
 
-function f3Async(){
+function f3Async(next){
 	console.log('f3Async triggered');
 	setTimeout(function(){
 		console.log('f3Async completed');
+		if (typeof next === 'function')
+			next();
 	}, 3000);
 }
 
-function f4Async(){
+function f4Async(next){
 	console.log('f4Async triggered');
 	setTimeout(function(){
 		console.log('f4Async completed');
+		if (typeof next === 'function')
+			next();
 	}, 3000);
 }
 
