@@ -9,7 +9,8 @@ var server = http.createServer(function(req, res){
 	dataParser(req);
 	serveStatic(req, res);
 	serveCalculator(req, res);
-	notFoundHandler(res);	
+	notFoundHandler(res);
+	console.log('at the end of server.js');
 });
 
 server.listen(8080);
